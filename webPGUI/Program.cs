@@ -6,30 +6,20 @@ using System.Reflection;
 
 namespace webPGUI
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
-
-            // get application GUID as defined in AssemblyInfo.cs
-            string appGuid = ((GuidAttribute)Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(GuidAttribute), false).GetValue(0)).Value.ToString();
-
-            // unique id for global mutex - Global prefix means it is global to the machine
-            string mutexId = string.Format("Global\\{{{0}}}", appGuid);
-
-            // Clipboard.SetText(mutexId);
-
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new webPGUI.frmMain());
-            new webPGUI.frmOutput();
-            new webPGUI.AboutBox();
+            Application.Run(new MainForm());
+            var formOutputForm = new OutputForm();
+            var aboutBoxForm = new AboutBoxForm();
         }
-
-        
     }
 }

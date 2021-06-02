@@ -11,16 +11,16 @@ using SlavaGu.ConsoleAppLauncher;
 
 namespace webPGUI
 {
-    public partial class frmOutput : Form
+    public partial class OutputForm : Form
     {
-        public frmOutput()
+        public OutputForm()
         {
             InitializeComponent();
         }
 
         private void frmOutput_Load(object sender, EventArgs e)
         {
-            textBox2.Text = Globals.consolelog;
+            textBox2.Text = Globals.Consolelog;
         }
     }
 }

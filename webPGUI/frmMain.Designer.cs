@@ -1,6 +1,6 @@
 ﻿namespace webPGUI
 {
-    partial class frmMain
+    sealed partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.label2 = new System.Windows.Forms.Label();
             this.button_encode = new System.Windows.Forms.Button();
             this.button_inputfile = new System.Windows.Forms.Button();
@@ -2404,7 +2404,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
-            this.Name = "frmMain";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WebP encoding tool GUI";
             this.Load += new System.EventHandler(this.frmMain_Load);

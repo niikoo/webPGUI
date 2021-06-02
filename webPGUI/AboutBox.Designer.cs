@@ -1,6 +1,6 @@
 ﻿namespace webPGUI
 {
-    partial class AboutBox
+    partial class AboutBoxForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBoxForm));
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.label_header = new System.Windows.Forms.Label();
             this.lblversion = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.textBoxDescription.BackColor = System.Drawing.Color.White;
             this.textBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDescription.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.textBoxDescription.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (51)))), ((int) (((byte) (51)))), ((int) (((byte) (51)))));
             this.textBoxDescription.Location = new System.Drawing.Point(0, 134);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(7, 4, 3, 4);
             this.textBoxDescription.Multiline = true;
@@ -52,12 +52,13 @@
             this.textBoxDescription.TabIndex = 24;
             this.textBoxDescription.TabStop = false;
             this.textBoxDescription.Text = resources.GetString("textBoxDescription.Text");
+            this.textBoxDescription.TextChanged += new System.EventHandler(this.textBoxDescription_TextChanged);
             // 
             // label_header
             // 
-            this.label_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
+            this.label_header.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (157)))), ((int) (((byte) (88)))));
             this.label_header.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label_header.Image = ((System.Drawing.Image)(resources.GetObject("label_header.Image")));
+            this.label_header.Image = ((System.Drawing.Image) (resources.GetObject("label_header.Image")));
             this.label_header.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.label_header.Location = new System.Drawing.Point(0, 0);
             this.label_header.Margin = new System.Windows.Forms.Padding(0);
@@ -69,8 +70,8 @@
             // lblversion
             // 
             this.lblversion.AutoSize = true;
-            this.lblversion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
-            this.lblversion.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblversion.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (157)))), ((int) (((byte) (88)))));
+            this.lblversion.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblversion.ForeColor = System.Drawing.Color.White;
             this.lblversion.Location = new System.Drawing.Point(342, 74);
             this.lblversion.Name = "lblversion";
@@ -83,8 +84,8 @@
             // 
             this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Gainsboro;
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(157)))), ((int)(((byte)(88)))));
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (157)))), ((int) (((byte) (88)))));
+            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Gainsboro;
             this.linkLabel1.Location = new System.Drawing.Point(343, 103);
             this.linkLabel1.Name = "linkLabel1";
@@ -96,7 +97,7 @@
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Gainsboro;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // AboutBox
+            // AboutBoxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -106,14 +107,14 @@
             this.Controls.Add(this.lblversion);
             this.Controls.Add(this.label_header);
             this.Controls.Add(this.textBoxDescription);
-            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (51)))), ((int) (((byte) (51)))), ((int) (((byte) (51)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "AboutBox";
+            this.Name = "AboutBoxForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -121,7 +122,6 @@
             this.Load += new System.EventHandler(this.AboutBox_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
